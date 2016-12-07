@@ -7,19 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8012063B1DF8772400587226 /* vid.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8012063A1DF8772400587226 /* vid.mov */; };
+		803704F91DF3536700C86493 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 803704F81DF3536700C86493 /* Assets.xcassets */; };
+		80AD61F71DF86F8400A25293 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80AD61F51DF86DF900A25293 /* MediaPlayer.framework */; };
 		80F154771DF1D0C900A76E58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F154761DF1D0C900A76E58 /* AppDelegate.swift */; };
 		80F154791DF1D0C900A76E58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F154781DF1D0C900A76E58 /* ViewController.swift */; };
 		80F1547C1DF1D0C900A76E58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80F1547A1DF1D0C900A76E58 /* Main.storyboard */; };
-		80F1547E1DF1D0C900A76E58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80F1547D1DF1D0C900A76E58 /* Assets.xcassets */; };
 		80F154811DF1D0C900A76E58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80F1547F1DF1D0C900A76E58 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8012063A1DF8772400587226 /* vid.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = vid.mov; sourceTree = "<group>"; };
+		803704F81DF3536700C86493 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		80AD61F51DF86DF900A25293 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		80F154731DF1D0C900A76E58 /* WeathAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeathAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80F154761DF1D0C900A76E58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80F154781DF1D0C900A76E58 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		80F1547B1DF1D0C900A76E58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		80F1547D1DF1D0C900A76E58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80F154801DF1D0C900A76E58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		80F154821DF1D0C900A76E58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80AD61F71DF86F8400A25293 /* MediaPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		80AD61F41DF86DF900A25293 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				80AD61F51DF86DF900A25293 /* MediaPlayer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		80F1546A1DF1D0C800A76E58 = {
 			isa = PBXGroup;
 			children = (
+				8012063A1DF8772400587226 /* vid.mov */,
 				80F154751DF1D0C900A76E58 /* WeathAR */,
 				80F154741DF1D0C900A76E58 /* Products */,
+				80AD61F41DF86DF900A25293 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,8 +72,8 @@
 				80F154761DF1D0C900A76E58 /* AppDelegate.swift */,
 				80F154781DF1D0C900A76E58 /* ViewController.swift */,
 				80F1547A1DF1D0C900A76E58 /* Main.storyboard */,
-				80F1547D1DF1D0C900A76E58 /* Assets.xcassets */,
 				80F1547F1DF1D0C900A76E58 /* LaunchScreen.storyboard */,
+				803704F81DF3536700C86493 /* Assets.xcassets */,
 				80F154821DF1D0C900A76E58 /* Info.plist */,
 			);
 			path = WeathAR;
@@ -124,8 +139,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8012063B1DF8772400587226 /* vid.mov in Resources */,
 				80F154811DF1D0C900A76E58 /* LaunchScreen.storyboard in Resources */,
-				80F1547E1DF1D0C900A76E58 /* Assets.xcassets in Resources */,
+				803704F91DF3536700C86493 /* Assets.xcassets in Resources */,
 				80F1547C1DF1D0C900A76E58 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import AVKit
+import AVFoundation
+
+//import MediaPlayer
 
 class ViewController: UIViewController {
 
@@ -17,6 +21,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var removeCityButton: UIButton!
     
     @IBOutlet weak var systemLabel: UILabel!
+    @IBOutlet weak var videoView: UIView!
+    
+    var moviePlayer: AVPlayerViewController!
+//    var moviePlayer: MPMoviePlayerController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +32,34 @@ class ViewController: UIViewController {
         systemLabel.text = ""
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        playVideo()
+    }
+    
+    private func playVideo() {
+        guard let path = Bundle.main.path(forResource: "vid", ofType: "mov") else {
+            debugPrint("Video not found")
+            return
+        }
+        let url = NSURL.fileURL(withPath: path)
+        let player = AVPlayer(url: url as URL)
+        let playerViewController = AVPlayerViewController()
+        playerViewController.player = player
+        playerViewController.view.frame = self.videoView.frame
+        self.videoView.addSubview(playerViewController.view)
+        self.addChildViewController(playerViewController)
+        player.play()
+        
+        
+//        self.present(playerViewController, animated: true){
+//            playerViewController.player!.play()
+//        }
+        
+//        self.videoView.addSubview(player.view)
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
